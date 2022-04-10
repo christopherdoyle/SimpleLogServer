@@ -20,6 +20,10 @@ The updates are not synchronized properly and assumptions are made here.
 python -m simplelogserver
 ```
 
+## Screenshot
+
+![This is a screenshot](screenshot.PNG)
+
 ## TODO
 
 * Show full record info on click
