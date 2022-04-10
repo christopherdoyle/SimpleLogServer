@@ -1,0 +1,66 @@
+
+:root {
+    --bg: #0b0516;
+    --fg: #f2feec;
+    --fg-low-intensity: #aab0a3;
+    --hl: #ffcb00;
+    --alert: #c50303;
+}
+
+html {
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+}
+
+#root-container {
+    margin: 0 auto;
+    width: 850px;
+}
+
+
+.records {
+    border-spacing: 0;
+    table-layout: fixed;
+    min-width: 100%;
+}
+.records td, .records th {
+    padding: 5px;
+    vertical-align: top;
+}
+.records thead tr {
+    font-weight: normal;
+    text-align: left;
+    color: var(--hl);
+}
+.records thead tr th {
+    border-bottom: 1px solid var(--hl);
+    border-bottom: 2px solid var(--hl);
+}
+.records tbody tr:last-child td {
+    border-bottom: 1px solid var(--hl);
+}
+.records tbody tr td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.records col.Message {
+    width: 100%;
+}
+.records col.Timestamp {
+    /* do not wrap the timestamp */
+    white-space: nowrap;
+}
+
+.record:hover > td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.record__debug {
+    color: var(--fg-low-intensity);
+}
+.record__error, .record__critical {
+    color: var(--alert);
+}
